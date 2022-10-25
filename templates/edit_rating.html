@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rating Editor</title>
+</head>
+<body>
+    <form action="{{ url_for('edit') }}" method="POST">
+        <p>Movie Name: {{movie.title}}</p>
+        <p>Current Rating {{movie.rating}}</p>
+        <input hidden="hidden" name="id" value="{{movie.id}}">
+        <input name="rating" type="text" placeholder="New Rating">
+        <button type="submit">Change Rating</button>
+    </form>
+</body>
+</html>
